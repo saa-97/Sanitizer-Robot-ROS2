@@ -8,4 +8,10 @@ The project included 4 stages as depicted below:
 
 ![image](https://github.com/saa-97/Sanitizer-Robot-ROS2/assets/145654679/96f2712f-1372-42a5-990d-92fa0dca3a96)
 
-The project utilizes the ROS2 package explore_lite (https://github.com/robo-friends/m-explore-ros2) for autonomous mapping of the environment.
+The project utilizes the ROS2 package [explore_lite](https://github.com/robo-friends/m-explore-ros2) for autonomous mapping of the environment.
+
+## Requirements
+The package requires the following to run successfully:
+1. ROS2 Humble
+2. Big House simulation Environment
+The package was developed on Ubuntu 22.04 
