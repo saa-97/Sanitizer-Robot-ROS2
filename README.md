@@ -15,3 +15,9 @@ The package requires the following to run successfully:
 1. ROS2 Humble
 2. Big House simulation Environment
 The package was developed on Ubuntu 22.04 
+
+## Building the package
+In order to build the package, put the **explore** and **amr_project** folders into your ROS2 workspace and build using the following commands:
+'''
+colcon build --packages-select explore_lite
+'''
