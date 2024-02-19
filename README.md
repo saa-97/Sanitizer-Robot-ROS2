@@ -22,3 +22,24 @@ In order to build the package, put the **explore** and **amr_project** folders i
 colcon build --packages-select explore_lite
 colcon build --packages-select amr_project  
 ```
+And then install by using:
+```
+. install/setup.bash
+```
+
+## Running the tasks
+The Big House simulation environment can be launched by using:
+```
+ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
+```
+
+The autonmous mapping can be done by running the following commands in three terminals:
+1. Launch Gazebo in the first terminals:
+   ```
+   ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
+   ```
+2. Launch RVIZ2 in order to visualize the mapping the process and to launch the NAV2 stack:
+   ```
+   ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True params_file:=/$HOME/dev_ws/src/amr_project/config/nav2_params.yaml slam:=True
+   ```
+   Make sure that the **params_file** argument contains the correct path to the parameters file while launching.
