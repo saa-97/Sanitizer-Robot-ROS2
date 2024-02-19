@@ -1,0 +1,24 @@
+#### Possible rooms
+# rooms = [
+#         'dining_room',
+#         'kitchen',
+#         'toilet',
+#         'living_room',
+#         'bedroom1',
+#         'bedroom2',
+#         'study',
+#         'lounge1',
+#     ]
+
+# bedroom1 
+# bedroom2
+
+dining_room
+kitchen
+toilet
+living_room
+bedroom1
+bedroom2
+study
+lounge1
+
