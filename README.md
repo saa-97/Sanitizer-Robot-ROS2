@@ -43,3 +43,7 @@ The autonmous mapping can be done by running the following commands in three ter
    ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True params_file:=/$HOME/dev_ws/src/amr_project/config/nav2_params.yaml slam:=True
    ```
    Make sure that the **params_file** argument contains the correct path to the parameters file while launching.
+3. Launch the explore lite package in order to start the mapping:
+   ```
+   ros2 launch explore_lite explore.launch.py
+   ```
