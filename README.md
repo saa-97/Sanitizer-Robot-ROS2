@@ -1,7 +1,5 @@
 # Sanitizer-Robot-ROS2
 
-This project was developed for the final examination of the course Autonomous and Mobile Robotics for Master's degree in Automation Engineering at the University of Bologna.
-
 The objective of this project was to implement a Sanitizer Robot to autonomously map, localize, navigate, and disinfect unknown environments with UV lamps for corona virus inactivation.
 
 The project included 4 stages as depicted below: 
