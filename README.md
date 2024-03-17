@@ -33,7 +33,9 @@ The Big House simulation environment can be launched by using:
 ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
 ```
 
-The autonmous mapping can be done by running the following commands in three terminals:
+### Autonomous mapping
+
+The autonomous mapping can be done by running the following commands in three different terminals:
 1. Launch Gazebo in the first terminals:
    ```
    ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
@@ -47,3 +49,44 @@ The autonmous mapping can be done by running the following commands in three ter
    ```
    ros2 launch explore_lite explore.launch.py
    ```
+In order to visualize the frontiers, go to RVIZ, then click on MarkerArray, select topic: /explore/frontiers
+
+### Localization and Navigation
+
+This task allows the robot to localize autonomously by using the /global_localization topic.
+
+1. Launch the bighouse environment in the first terminal:
+   ```
+   ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
+   ```
+2. Launch RVIZ and NAV2 stack in a separate terminal:
+   ```
+   ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/dev_ws/src/amr_project/maps/bighousemap.yaml params_file:=/$HOME/dev_ws/src/amr_project/config/nav2_params.yaml
+   ```
+   Ensure that the path for params_file and map are consistent with the location of the package and configuration files.
+3. In a separate terminal, launch the localization and navigation nodes:
+   ```
+   ros2 launch amr_project task3.launch.py
+   ```
+
+### Sanitization of the Environment:
+The goal of this task is to allow the robot to sanitize the environment by spreading UV radiation. 
+
+1. Launch the bighouse environment:
+   ```
+   ros2 launch turtlebot3_gazebo turtlebot3_bighouse.launch.py
+   ```
+2. Launch RVIZ and NAV2 stack in a separate terminal:
+   ```
+   ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=$HOME/dev_ws/src/amr_project/maps/bighousemap.yaml params_file:=/$HOME/dev_ws/src/amr_project/config/nav2_params.yaml
+   ```
+   Ensure that the path for params_file and map are consistent with the location of the package and configuration files.
+3. Start the sanitization node by running the following command in a separate terminal:
+   ```
+   ros2 launch amr_project task4.launch.py
+   ```
+In order to visualize the sanitized areas, go to RVIZ, then click on Map, select topic: /energy_map
+
+
+
+
