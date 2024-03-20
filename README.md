@@ -1,4 +1,4 @@
-# Sanitizer-Robot-ROS2
+# Sanitizer-Robot-ROS2 #
 
 The objective of this project was to implement a Sanitizer Robot to autonomously map, localize, navigate, and disinfect unknown environments with UV lamps for corona virus inactivation.
 
